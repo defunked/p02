@@ -1,0 +1,165 @@
+@import "helpers/optimize";
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+  background-color: white;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+  font-family: $main-font;
+  color: white;
+  font-size: 11px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: $alt-color;
+}
+
+.button {
+  background-color: $alt-color;
+  color: white;
+  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+  border-radius: 2px;
+  font-size: 11px;
+  font-family: $main-font;
+  font-style: italic;
+  text-transform: uppercase;
+  border: 0;
+
+  position: relative;
+  top: 0;
+  transition: top 0.1s;
+}
+
+.button:hover {
+  top: 1px;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  background-color: black;
+  // position: sticky;
+}
+
+.header-wrap {
+  height: 80px;
+  max-width: 1256px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-logo {
+  color: $alt-color;
+  font-size: 11px;
+}
+
+.page-nav {
+  // width: 581px;
+  margin: 0 67px 0 95px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 47px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+.nav-link {
+  text-transform: uppercase;
+}
+
+.header--link {
+  color: $alt-color;
+  text-decoration: underline;
+  top: 0;
+  position: relative;
+  transition: top 0.1s;
+  transition: color 0.1s;
+}
+
+.header--link:hover {
+  // text-decoration: none;
+  top: 1px;
+  color: white;
+}
+
+.header--button {
+  margin-left: 45px;
+  padding: 13px 33px;
+  height: 37px;
+}
+
+.title {
+  font-family: $title-font;
+  margin: 0;
+  padding: 0;
+  color: $alt-color;
+  font-weight: normal;
+}
+
+.section-wrap {
+  max-width: 1236px;
+  margin: 0 auto;
+  // box-sizing: border-box;
+  height: 707px;
+}
+
+.hero {
+  background-image: url(../images/interior-01-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.hero-title {
+  color: white;
+  font-size: 40px;
+  line-height: 53px;
+}
+
+.hero-title__alt {
+  color: $alt-color;
+}
+
+.section-content {
+  padding-left: 32px;
+  padding-top: 194px;
+  width: 510px;
+}
+
+.hero--button {
+  width: 207px;
+  height: 51px;
+  box-sizing: border-box;
+}
