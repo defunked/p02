@@ -131,6 +131,7 @@ body {
 }
 
 .hero {
+  background-color: white;
   background-image: url(../images/interior-01-bg.jpg);
   background-size: cover;
   background-position: center center;
@@ -153,12 +154,26 @@ body {
   // opacity: 1;
 }
 
-.section-content-wrap {
+.projects {
+  background-color: black;
+  height: 1074px;
+}
+
+.content-wrap {
+  // width: 100%
+}
+
+.hero__content-wrap {
   padding-left: 32px;
   padding-top: 194px;
   width: 510px;
   z-index: 1;
   position: relative;
+}
+
+.projects__content-wrap {
+  color: white;
+  padding: 107px 32px 414px;
 }
 
 .title {

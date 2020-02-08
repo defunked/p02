@@ -101,6 +101,7 @@ body {
   margin: 0 auto; }
 
 .hero {
+  background-color: white;
   background-image: url(../images/interior-01-bg.jpg);
   background-size: cover;
   background-position: center center;
@@ -117,12 +118,20 @@ body {
   background: rgba(0, 0, 0, 0.7);
   position: absolute; }
 
-.section-content-wrap {
+.projects {
+  background-color: black;
+  height: 1074px; }
+
+.hero__content-wrap {
   padding-left: 32px;
   padding-top: 194px;
   width: 510px;
   z-index: 1;
   position: relative; }
+
+.projects__content-wrap {
+  color: white;
+  padding: 107px 32px 414px; }
 
 .title {
   font-family: "Yeseva One", cursive;
@@ -183,7 +192,7 @@ body {
     height: auto; }
   .hero {
     height: auto; }
-  .section-content-wrap {
+  .hero__content-wrap {
     padding: 85px 18px 61px 18px;
     width: auto; }
   .hero__title {
