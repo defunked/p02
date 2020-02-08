@@ -7,7 +7,9 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: white;
   font-weight: normal;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 27px; }
 
 .link {
   text-decoration: none;
@@ -125,9 +127,10 @@ body {
 .hero__content-wrap {
   padding-left: 32px;
   padding-top: 194px;
-  width: 510px;
+  width: 676px;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  box-sizing: content-box; }
 
 .projects__content-wrap {
   color: white;
@@ -138,7 +141,8 @@ body {
   margin: 0;
   padding: 0;
   color: #e3b873;
-  font-weight: normal; }
+  font-weight: normal;
+  text-transform: uppercase; }
 
 .hero__title {
   color: white;
@@ -149,11 +153,18 @@ body {
 .hero__title--alt-color {
   color: #e3b873; }
 
+.projects__title {
+  font-size: 27px;
+  line-height: 37px;
+  letter-spacing: -0.07em;
+  margin-bottom: 20px; }
+
 .hero__text {
   font-size: 22px;
   line-height: 36px;
   color: white;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  width: 504px; }
 
 .hero__button {
   width: 207px;
@@ -202,7 +213,8 @@ body {
   .hero__text {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    width: auto; }
   .hero__button {
     display: block;
     width: 100%;

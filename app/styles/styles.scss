@@ -14,6 +14,8 @@ body {
   background-color: white;
   font-weight: normal;
   box-sizing: border-box;
+  font-size: 14px;
+  line-height: 27px;
 }
 
 .link {
@@ -166,9 +168,10 @@ body {
 .hero__content-wrap {
   padding-left: 32px;
   padding-top: 194px;
-  width: 510px;
+  width: 676px;
   z-index: 1;
   position: relative;
+  box-sizing: content-box;
 }
 
 .projects__content-wrap {
@@ -182,6 +185,7 @@ body {
   padding: 0;
   color: $alt-color;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .hero__title {
@@ -195,12 +199,20 @@ body {
   color: $alt-color;
 }
 
+.projects__title {
+  font-size: 27px;
+  line-height: 37px;
+  letter-spacing: -0.07em;
+  margin-bottom: 20px;
+}
+
 .hero__text {
   font-size: 22px;
   line-height: 36px;
   color: white;
   // font-weight: normal;
   margin-bottom: 40px;
+  width: 504px;
 }
 
 .hero__button {
