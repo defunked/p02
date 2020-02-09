@@ -157,7 +157,12 @@ body {
   font-size: 27px;
   line-height: 37px;
   letter-spacing: -0.07em;
-  margin-bottom: 20px; }
+  margin-bottom: 34px; }
+
+.projects__title--property {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 9px; }
 
 .hero__text {
   font-size: 22px;
@@ -165,6 +170,14 @@ body {
   color: white;
   margin-bottom: 40px;
   width: 504px; }
+
+.projects__text {
+  margin-bottom: 34px; }
+
+.projects__text--property {
+  font-size: 13px;
+  line-height: 21px;
+  margin-bottom: 34px; }
 
 .hero__button {
   width: 207px;
