@@ -32,12 +32,17 @@
     height: auto;
   }
 
-  .hero {
+  .hero,
+  .projects {
     height: auto;
   }
 
-  .section-content-wrap {
-    padding: 85px 18px 61px 18px;
+  .content-wrap {
+    padding: 0 18px;
+  }
+  .hero__content-wrap {
+    padding-top: 85px;
+    padding-bottom: 61px;
     width: auto;
   }
 
@@ -51,6 +56,7 @@
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 32px;
+    width: auto;
   }
 
   .hero__button {
@@ -62,5 +68,101 @@
   .hero__button ~ .hero__button--transparent {
     margin-left: 0;
     margin-top: 20px;
+  }
+
+  .projects__content-wrap {
+    padding-top: 36px;
+    padding-bottom: 58px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects__content {
+    align-items: center;
+    height: auto;
+  }
+
+  .projects__description {
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 38px;
+    order: 0;
+  }
+
+  .projects__text {
+    text-align: center;
+    max-width: 311px;
+    margin: 0 auto;
+    order: 1;
+    margin-bottom: 76px;
+  }
+
+  .projects__properties {
+    order: 3;
+  }
+
+  .projects__photos {
+    order: 2;
+    margin-bottom: 37px;
+  }
+
+  .projects__properties {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .projects__property {
+    width: 140px;
+    margin-right: 40px;
+    margin-bottom: 37px;
+  }
+
+  .projects__property:nth-child(even) {
+    margin-right: 40px;
+  }
+
+  .projects__property:last-child {
+    margin-right: 0px;
+  }
+
+  .projects__property-title {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 13px;
+  }
+
+  .projects__property-text {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  //
+  //
+  //
+
+  .projects__slider-nav {
+    display: none;
+  }
+  .projects__list {
+    display: none;
+  }
+  .slider__photo {
+    width: 100%;
+    height: auto;
+  }
+  .slider__controls {
+    display: flex;
   }
 }
