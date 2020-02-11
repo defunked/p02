@@ -414,4 +414,23 @@ body {
   height: auto;
 }
 
+.online-control__content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #363636;
+  margin-top: -257px;
+}
+
+.online-control__title {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  // letter-spacing: -0.07em;
+  // margin-top: 70px;
+  // margin-bottom: 34px;
+  color: white;
+}
+
 @import "helpers/adaptive";

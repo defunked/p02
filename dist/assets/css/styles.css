@@ -343,6 +343,20 @@ body {
   width: 100%;
   height: auto; }
 
+.online-control__content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #363636;
+  margin-top: -257px; }
+
+.online-control__title {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: white; }
+
 @media screen and (max-width: 1300px) {
   .page-header {
     position: static; }
