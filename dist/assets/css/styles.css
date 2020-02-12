@@ -33,10 +33,11 @@ body {
   border: 0;
   position: relative;
   top: 0;
-  transition: top 0.1s; }
+  transition: background-color 0.2s; }
 
 .button:hover {
-  top: 1px; }
+  top: 1px;
+  background-color: #dfad5d; }
 
 .title {
   font-family: "Yeseva One", cursive;
@@ -190,27 +191,31 @@ body {
   width: 504px; }
 
 .hero__button {
+  background-color: #e3b873;
   width: 207px;
   height: 51px;
-  background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #dfad5d;
   box-shadow: none;
   transition: background-color 0.2s; }
 
 .hero__button:hover {
-  background-color: #e3b873;
-  border: 1px solid #e3b873;
+  background-color: #dfad5d;
   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15); }
 
 .hero__button:active {
   background-color: #e3b873;
   border: 1px solid #e3b873;
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15); }
+  box-shadow: none; }
 
 .hero__button--transparent {
   background-color: transparent;
   border: 1px solid white;
-  box-shadow: none; }
+  box-shadow: none;
+  transition: none; }
+
+.hero__button--transparent:hover {
+  border: 2px solid white;
+  background-color: transparent; }
 
 .hero__button ~ .hero__button--transparent {
   margin-left: 20px; }
