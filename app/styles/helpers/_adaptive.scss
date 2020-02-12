@@ -1,4 +1,13 @@
 @media screen and (max-width: 1300px) {
+  hr {
+    margin-top: 28px;
+    margin-bottom: 21px;
+  }
+
+  .video-player {
+    box-shadow: none;
+  }
+
   .page-header {
     position: static;
   }
@@ -161,6 +170,30 @@
   }
   .slider__controls {
     display: flex;
+  }
+
+  .online-control {
+    background-color: #131313;
+  }
+
+  .online-control__content-wrap {
+    margin-top: 0;
+  }
+
+  .online-control__title {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  .online-control__title::after {
+    margin-top: 20px;
+  }
+
+  .online-control__text {
+    color: white;
+    font-size: 11px;
+    line-height: 19px;
   }
 }
 
