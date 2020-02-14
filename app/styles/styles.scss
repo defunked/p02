@@ -43,7 +43,6 @@ hr {
 .button {
   background-color: $alt-color;
   color: white;
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   border-radius: 2px;
   font-size: 11px;
   font-family: $main-font;
@@ -53,13 +52,25 @@ hr {
   position: relative;
   top: 0;
   transition: background-color 0.2s;
+  cursor: pointer;
+  box-shadow: none;
 }
 
 .button:hover {
-  top: 1px;
+  // top: 1px;
 
   background-color: $alt-color--hover;
   // background-color: red;
+  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+}
+
+.button--round {
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  // bottom: 0;
+  // left: 0;
 }
 
 .title {
@@ -97,22 +108,10 @@ hr {
   padding: 0 14px;
 }
 
-.slider__button {
-  background-repeat: no-repeat;
-  background-color: $alt-color;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  border-radius: 50%;
-  bottom: 0;
-  border: none;
-  left: 0;
-}
-
-.slider__button:hover {
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-  top: 1px;
-}
+// .slider__button:hover {
+//   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+//   top: 1px;
+// }
 
 .slider__button--left {
   background-image: url('data:image/svg+xml,%3Csvg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 12.478L1.08689 6.99975L6.56569 1.52147L7.34778 2.30348L2.65107 6.99975L7.34778 11.696L6.56569 12.478Z" fill="white" stroke="white" stroke-width="0.75"/%3E%3C/svg%3E');
@@ -155,22 +154,22 @@ hr {
 }
 
 .video-player__button {
-  background-repeat: no-repeat;
-  background-color: $alt-color;
+  // background-repeat: no-repeat;
+  // background-color: $alt-color;
   width: 85px;
   height: 85px;
-  position: relative;
-  border-radius: 50%;
-  bottom: 0;
-  border: none;
-  left: 0;
-  transition: background-color 0.3s;
+  // position: relative;
+  // border-radius: 50%;
+  // bottom: 0;
+  // left: 0;
+  // border: none;
+  // transition: background-color 0.3s;
 }
 
 .video-player__button:hover {
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-  background-color: $alt-color--hover;
-  top: 1px;
+  // box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+  // background-color: $alt-color--hover;
+  // top: 1px;
 }
 
 .video-player__button--play {
@@ -275,6 +274,7 @@ hr {
   margin-left: 45px;
   padding: 13px 33px;
   height: 37px;
+  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
 }
 
 // .content-wrap {
@@ -365,6 +365,7 @@ hr {
   border: 2px solid white;
   background-color: transparent;
   // transition: border 0.7s;
+  box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.15);
 }
 
 .hero__button ~ .hero__button--transparent {

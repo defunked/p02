@@ -33,7 +33,6 @@ hr {
 .button {
   background-color: #e3b873;
   color: white;
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   border-radius: 2px;
   font-size: 11px;
   font-family: "Nunito", sans-serif;
@@ -42,11 +41,19 @@ hr {
   border: 0;
   position: relative;
   top: 0;
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s;
+  cursor: pointer;
+  box-shadow: none; }
 
 .button:hover {
-  top: 1px;
-  background-color: #dfad5d; }
+  background-color: #dfad5d;
+  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15); }
+
+.button--round {
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; }
 
 .title {
   font-family: "Yeseva One", cursive;
@@ -77,21 +84,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding: 0 14px; }
-
-.slider__button {
-  background-repeat: no-repeat;
-  background-color: #e3b873;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  border-radius: 50%;
-  bottom: 0;
-  border: none;
-  left: 0; }
-
-.slider__button:hover {
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-  top: 1px; }
 
 .slider__button--left {
   background-image: url('data:image/svg+xml,%3Csvg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 12.478L1.08689 6.99975L6.56569 1.52147L7.34778 2.30348L2.65107 6.99975L7.34778 11.696L6.56569 12.478Z" fill="white" stroke="white" stroke-width="0.75"/%3E%3C/svg%3E');
@@ -129,21 +121,8 @@ hr {
   padding: 0; }
 
 .video-player__button {
-  background-repeat: no-repeat;
-  background-color: #e3b873;
   width: 85px;
-  height: 85px;
-  position: relative;
-  border-radius: 50%;
-  bottom: 0;
-  border: none;
-  left: 0;
-  transition: background-color 0.3s; }
-
-.video-player__button:hover {
-  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-  background-color: #dfad5d;
-  top: 1px; }
+  height: 85px; }
 
 .video-player__button--play {
   background-image: url('data:image/svg+xml,%3Csvg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M21 12.9999L7.65417e-07 25.1242L1.82536e-06 0.875522L21 12.9999Z" fill="white"/%3E%3C/svg%3E');
@@ -231,7 +210,8 @@ hr {
 .page-header__button {
   margin-left: 45px;
   padding: 13px 33px;
-  height: 37px; }
+  height: 37px;
+  box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15); }
 
 .section-wrap {
   max-width: 1236px;
@@ -304,7 +284,8 @@ hr {
 
 .hero__button--transparent:hover {
   border: 2px solid white;
-  background-color: transparent; }
+  background-color: transparent;
+  box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.15); }
 
 .hero__button ~ .hero__button--transparent {
   margin-left: 20px; }
