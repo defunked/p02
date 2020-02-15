@@ -8,6 +8,60 @@
     box-shadow: none;
   }
 
+  .video-player__button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .video-player__button--play {
+    background-image: url('data:image/svg+xml,%3Csvg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M21 12.9999L7.65417e-07 25.1242L1.82536e-06 0.875522L21 12.9999Z" fill="white"/%3E%3C/svg%3E');
+    background-size: 12px;
+    background-position: 55% 49%;
+  }
+
+  .form {
+    margin: 0px;
+    width: 100%;
+    flex-direction: column;
+    // background-color: green;
+    justify-content: flex-start;
+    max-width: 100%;
+    // margin-bottom: -100px;
+  }
+
+  .input__label--text {
+    width: 100%;
+    margin: 63px 0px 0px;
+    font-size: 13px;
+    line-height: 21px;
+    // background: tomato;
+  }
+
+  .form__input--text {
+    color: white;
+    background-color: transparent;
+    line-height: 19px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    // background: red;
+    // vertical-align: bottom;
+  }
+
+  .form__button {
+    order: 4;
+    width: 100%;
+    font-size: 13px;
+    list-style: 27px;
+    position: relative;
+    top: 26px;
+  }
+
+  .input__label--checkbox {
+    order: 3;
+    color: white;
+    margin-bottom: 62px;
+  }
+
   .page-header {
     position: static;
   }
@@ -174,10 +228,12 @@
 
   .online-control {
     background-color: #131313;
+    // margin-bottom: -20px;
   }
 
   .online-control__content-wrap {
     margin-top: 0;
+    // margin-bottom: -20px;
   }
 
   .online-control__title {
@@ -194,6 +250,53 @@
     color: white;
     font-size: 11px;
     line-height: 19px;
+    margin-bottom: 0px;
+  }
+
+  .repair-types__title {
+    margin-top: 83px;
+    margin-bottom: 40px;
+  }
+
+  .repair-type__title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .repair-types__content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .repair-type {
+    width: 100%;
+    padding-top: 223px;
+    padding-left: 0;
+    padding-right: 70px;
+    margin-bottom: 79px;
+  }
+
+  .repair-type__description {
+    padding: 21px 31px 37px;
+  }
+
+  .repair-type__title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .repair-type__options {
+    margin-top: 10px;
+  }
+
+  .repair-type__option {
+    line-height: 22px;
+  }
+  .repair-type__cost {
+    font-size: 15px;
+    line-height: 21px;
+    padding: 12px 16px;
+    top: -20px;
   }
 }
 
