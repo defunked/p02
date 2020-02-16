@@ -1,7 +1,6 @@
 @media screen and (max-width: 1300px) {
   hr {
     margin-top: 28px;
-    margin-bottom: 21px;
   }
 
   .video-player {
@@ -21,11 +20,10 @@
 
   .form {
     margin: 0px;
-    width: 100%;
+    max-width: 50%;
     flex-direction: column;
     // background-color: green;
     justify-content: flex-start;
-    max-width: 100%;
     // margin-bottom: -100px;
   }
 
@@ -125,11 +123,12 @@
     line-height: 19px;
     margin-bottom: 32px;
     width: auto;
+    max-width: 50%;
   }
 
   .hero__button {
     display: block;
-    width: 100%;
+    min-width: 20%;
     height: 51px;
   }
 
@@ -252,6 +251,7 @@
   }
 
   .online-control__text {
+    margin-top: 25px;
     color: white;
     font-size: 11px;
     line-height: 19px;
@@ -274,7 +274,7 @@
   }
 
   .repair-type {
-    width: 100%;
+    // max-width: 120%;
     padding-top: 223px;
     padding-left: 0;
     padding-right: 70px;
@@ -311,11 +311,32 @@
     width: 400px;
     // flex-direction: column;
   }
+  .form {
+    max-width: 70%;
+  }
+
+  .repair-type {
+    // max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .projects__properties {
     width: auto;
     flex-direction: column;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+  .hero__button {
+    min-width: 100%;
+  }
+  .repair-type {
+    max-width: 100%;
   }
 }
