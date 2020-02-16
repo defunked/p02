@@ -29,8 +29,13 @@
     // margin-bottom: -100px;
   }
 
+  .form__input::placeholder {
+    color: white;
+  }
+
   .input__label--text {
     width: 100%;
+    color: rgba(255, 255, 255, 0.5);
     margin: 63px 0px 0px;
     font-size: 13px;
     line-height: 21px;

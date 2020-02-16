@@ -3,20 +3,17 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 
-// глобальные стили, и стили универсальных блокво
+// глобальные стили, и стили универсальных блоков
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 body {
   font-family: $main-font;
   background-color: white;
   font-weight: normal;
-  box-sizing: border-box;
   font-size: 14px;
-  line-height: 27px;
 }
 
 hr {
@@ -26,15 +23,13 @@ hr {
   background-color: $alt-color;
   border-style: none;
   margin-top: 62px;
-  margin-bottom: 34px;
 }
 //  ссылка
 
 .link {
-  text-decoration: none;
   font-family: $main-font;
+  text-decoration: none;
   color: white;
-  font-size: 11px;
 }
 
 .link:hover {
@@ -48,37 +43,29 @@ hr {
   background-color: $alt-color;
   color: white;
   border-radius: 2px;
-  font-size: 11px;
   font-family: $main-font;
   font-style: italic;
   text-transform: uppercase;
   border: 0;
-  position: relative;
-  top: 0;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  // transition: background-color 0.2s;
   cursor: pointer;
   box-shadow: none;
+  padding: 0;
 }
 
 .button:hover {
-  // top: 1px;
   transform: scale(1.02);
-
   background-color: $alt-color--hover;
-  // background-color: red;
   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
 }
 
 // круглая кнопка
 
 .button--round {
-  background-repeat: no-repeat;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  // bottom: 0;
-  // left: 0;
+  background-repeat: no-repeat;
 }
 
 // заголовок
@@ -114,16 +101,10 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-  // display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 14px;
 }
-
-// .slider__button:hover {
-//   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-//   top: 1px;
-// }
 
 .slider__button--left {
   background-image: url('data:image/svg+xml,%3Csvg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 12.478L1.08689 6.99975L6.56569 1.52147L7.34778 2.30348L2.65107 6.99975L7.34778 11.696L6.56569 12.478Z" fill="white" stroke="white" stroke-width="0.75"/%3E%3C/svg%3E');
@@ -172,12 +153,6 @@ hr {
   height: 85px;
 }
 
-.video-player__button:hover {
-  // box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-  // background-color: $alt-color--hover;
-  // top: 1px;
-}
-
 .video-player__button--play {
   background-image: url('data:image/svg+xml,%3Csvg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M21 12.9999L7.65417e-07 25.1242L1.82536e-06 0.875522L21 12.9999Z" fill="white"/%3E%3C/svg%3E');
   background-position: 55% 53%;
@@ -188,12 +163,10 @@ hr {
 .form {
   display: flex;
   flex-direction: row;
-  // margin: 30px 0 0;
   max-width: 770px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-between;
-  // align-content:
 }
 
 .form__button {
@@ -203,19 +176,20 @@ hr {
   order: 3;
 }
 
-// инпут
+// инпут (общий стиль)
 
 .form__input {
   border: none;
   font-size: 14px;
   line-height: 23px;
-  // color: red;
   color: #363636;
-  // margin-bottom: 8px;
-
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   box-sizing: border-box;
   width: 100%;
+}
+
+.form__input::placeholder {
+  color: #363636;
 }
 
 // инпут текст
@@ -229,7 +203,6 @@ hr {
   justify-content: flex-end;
   font-size: 14px;
   line-height: 23px;
-  // color: red;
   color: rgba(54, 54, 54, 0.5);
   margin-right: 45px;
   width: 230px;
@@ -240,61 +213,83 @@ hr {
 // лейбл чекбокса
 
 .input__label--checkbox {
-  display: block;
-  margin-top: 35px;
   display: flex;
   flex-direction: row;
-  order: 4;
-  color: #181818;
   font-size: 14px;
   line-height: 23px;
+  color: #181818;
+  margin-top: 35px;
+  order: 4;
+  padding-left: 25px;
 }
 
 // браузерный чекбокс
 
 .form__input--checkbox {
-  -webkit-appearance: none;
   position: absolute;
-  // color: #181818;
-  // font-size: 14px;
-  // line-height: 23px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .input__toggle--checkbox {
+  position: absolute;
   width: 23px;
   height: 23px;
-  margin-right: 8px;
-  background-image: url('data:image/svg+xml,%3Csvg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.19043 1.14893C0.19043 0.596642 0.638145 0.148926 1.19043 0.148926H17.1904C17.7427 0.148926 18.1904 0.596641 18.1904 1.14893V17.1489C18.1904 17.7012 17.7427 18.1489 17.1904 18.1489H1.19043C0.638145 18.1489 0.19043 17.7012 0.19043 17.1489V1.14893Z" fill="%23E3B873"/%3E%3C/svg%3E');
+  // margin-right: 8px;
+  margin-left: -25px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-// состояние для чекбокса
+// состояния для чекбокса
+
+// состояния для чекбокса: OFF
+
+.input__toggle--checkbox {
+  background-image: url('data:image/svg+xml,%3Csvg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.19043 1.14893C0.19043 0.596642 0.638145 0.148926 1.19043 0.148926H17.1904C17.7427 0.148926 18.1904 0.596641 18.1904 1.14893V17.1489C18.1904 17.7012 17.7427 18.1489 17.1904 18.1489H1.19043C0.638145 18.1489 0.19043 17.7012 0.19043 17.1489V1.14893Z" fill="%23E3B873"/%3E%3C/svg%3E');
+}
+
+// состояния для чекбокса: ON
 
 .form__input--checkbox:checked + .input__toggle--checkbox {
   background-image: url('data:image/svg+xml,%3Csvg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.19043 1.14893C0.19043 0.596642 0.638145 0.148926 1.19043 0.148926H17.1904C17.7427 0.148926 18.1904 0.596641 18.1904 1.14893V17.1489C18.1904 17.7012 17.7427 18.1489 17.1904 18.1489H1.19043C0.638145 18.1489 0.19043 17.7012 0.19043 17.1489V1.14893Z" fill="%23E3B873"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M8.32503 10.3382L13.5062 5.15698L14.5669 6.21764L8.32503 12.4595L5.19855 9.33303L6.25921 8.27237L8.32503 10.3382Z" fill="white"/%3E%3C/svg%3E');
 }
 
+// состояния для чекбокса: focused OFF
+
 .form__input--checkbox:focus + .input__toggle--checkbox {
   background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M2.19043 3.14893C2.19043 2.59664 2.63814 2.14893 3.19043 2.14893H19.1904C19.7427 2.14893 20.1904 2.59664 20.1904 3.14893V19.1489C20.1904 19.7012 19.7427 20.1489 19.1904 20.1489H3.19043C2.63815 20.1489 2.19043 19.7012 2.19043 19.1489V3.14893Z" fill="%23E3B873"/%3E%3Cpath d="M3.19043 1.14893C2.08586 1.14893 1.19043 2.04436 1.19043 3.14893V19.1489C1.19043 20.2535 2.08586 21.1489 3.19043 21.1489H19.1904C20.295 21.1489 21.1904 20.2535 21.1904 19.1489V3.14893C21.1904 2.04436 20.295 1.14893 19.1904 1.14893H3.19043Z" stroke="%23F76B1D" stroke-opacity="0.79" stroke-width="2"/%3E%3C/svg%3E');
 }
+
+// состояния для чекбокса: focused ON
 
 .form__input--checkbox:checked:focus + .input__toggle--checkbox {
   background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M2.19043 3.14893C2.19043 2.59664 2.63814 2.14893 3.19043 2.14893H19.1904C19.7427 2.14893 20.1904 2.59664 20.1904 3.14893V19.1489C20.1904 19.7012 19.7427 20.1489 19.1904 20.1489H3.19043C2.63815 20.1489 2.19043 19.7012 2.19043 19.1489V3.14893Z" fill="%23E3B873"/%3E%3Cpath d="M3.19043 1.14893C2.08586 1.14893 1.19043 2.04436 1.19043 3.14893V19.1489C1.19043 20.2535 2.08586 21.1489 3.19043 21.1489H19.1904C20.295 21.1489 21.1904 20.2535 21.1904 19.1489V3.14893C21.1904 2.04436 20.295 1.14893 19.1904 1.14893H3.19043Z" stroke="%23F76B1D" stroke-opacity="0.79" stroke-width="2"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M10.325 12.3382L15.5062 7.15698L16.5669 8.21764L10.325 14.4595L7.19855 11.333L8.25921 10.2724L10.325 12.3382Z" fill="white"/%3E%3C/svg%3E');
 }
 
+// состояния для чекбокса: disabled OFF
+
 .form__input--checkbox:disabled + .input__toggle--checkbox {
   background-image: url('data:image/svg+xml,%3Csvg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.19043 1.14893C0.19043 0.596642 0.638145 0.148926 1.19043 0.148926H17.1904C17.7427 0.148926 18.1904 0.596641 18.1904 1.14893V17.1489C18.1904 17.7012 17.7427 18.1489 17.1904 18.1489H1.19043C0.638145 18.1489 0.19043 17.7012 0.19043 17.1489V1.14893Z" fill="%23363636" fill-opacity="0.5"/%3E%3C/svg%3E');
 }
+
+// состояния для чекбокса: disabled ON
 
 .form__input--checkbox:checked:disabled + .input__toggle--checkbox {
   background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M3.19043 1.14893C2.08586 1.14893 1.19043 2.04436 1.19043 3.14893V19.1489C1.19043 20.2535 2.08586 21.1489 3.19043 21.1489H19.1904C20.295 21.1489 21.1904 20.2535 21.1904 19.1489V3.14893C21.1904 2.04436 20.295 1.14893 19.1904 1.14893H3.19043Z" fill="%23363636" fill-opacity="0.5" stroke="white" stroke-width="2"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M10.325 12.3382L15.5062 7.15698L16.5669 8.21764L10.325 14.4595L7.19855 11.333L8.25921 10.2724L10.325 12.3382Z" fill="white" fill-opacity="0.5"/%3E%3C/svg%3E');
 }
 
+// обёртка всего
+
 .page-wrap {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+
+// обёртка хэдера
 
 .page-header {
   background-color: #131313;
@@ -303,53 +298,71 @@ hr {
   z-index: 10;
 }
 
+// обёртка содержимого хэдера
+
 .header-wrap {
-  height: 80px;
-  max-width: 1256px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 1256px;
+  height: 80px;
+  margin: 0 auto;
 }
 
+// лого
+
 .page-logo {
+  font-family: $main-font;
   color: $alt-color;
   font-size: 11px;
+  line-height: 15px;
 }
+
+// nav обёртка основного меню
 
 .page-nav {
   margin: 0 67px 0 95px;
 }
 
+// список ссылок в основном меню
+
 .page-nav__list {
-  list-style: none;
   display: flex;
-  flex-direction: row;
+  list-style: none;
   justify-content: space-between;
-  margin: 0;
   padding: 0;
 }
+
+// элемент списка ссылок
 
 .page-nav__item {
   margin-left: 47px;
 }
 
+// последний элемент списка ссылок
+
 .page-nav__item:first-child {
   margin-left: 0;
 }
 
+// ссылка основного меню
+
 .page-nav__link {
+  font-size: 11px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 
+// ссылка в хедере (телефон)
+
 .page-header__link {
+  font-size: 11px;
+  line-height: 15px;
   color: $alt-color;
   text-decoration: underline;
   top: 0;
   position: relative;
-  transition: top 0.1s;
-  transition: color 0.1s;
+  transition: top 0.1s, color 0.1s;
 }
 
 .page-header__link:hover {
@@ -357,20 +370,38 @@ hr {
   color: white;
 }
 
+// кнопка в хедере
+
 .page-header__button {
+  font-size: 11px;
+  line-height: 15px;
   margin-left: 45px;
   padding: 13px 33px;
   height: 37px;
   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
 }
 
+// ----------------------------------------------
+// контейнеры, секции, блоки
+
+// main
+
+// .page-content {
+// }
+
+// обёртка контента в main
+
 // .content-wrap {
 // }
+
+// обёртка секции
 
 .section-wrap {
   max-width: 1236px;
   margin: 0 auto;
 }
+
+// секция Hero
 
 .hero {
   background-color: white;
@@ -378,7 +409,7 @@ hr {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 808px;
+  // height: 808px;
   position: relative;
 }
 
@@ -392,20 +423,24 @@ hr {
   position: absolute;
 }
 
+// обёртка контента секции Hero
+
 .hero__content-wrap {
   padding-left: 32px;
   padding-top: 194px;
+  padding-bottom: 208px;
   width: 676px;
   z-index: 1;
   position: relative;
   box-sizing: content-box;
 }
 
+// Hero .title, text, button,
+
 .hero__title {
   color: white;
   font-size: 40px;
   line-height: 53px;
-  margin-bottom: 20px;
 }
 
 .hero__title--alt-color {
@@ -416,22 +451,18 @@ hr {
   font-size: 22px;
   line-height: 36px;
   color: white;
+  margin-top: 20px;
   margin-bottom: 40px;
   width: 504px;
 }
 
 .hero__button {
-  // background-color: $alt-color;
   width: 207px;
   height: 51px;
-  // background-color: transparent;
   border: 1px solid $alt-color--hover;
   box-shadow: none;
-}
-
-.hero__button:hover {
-  // background-color: $alt-color--hover;
-  // box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+  font-size: 11px;
+  line-height: 15px;
 }
 
 .hero__button:active {
@@ -450,7 +481,6 @@ hr {
 .hero__button--transparent:hover {
   border: 2px solid white;
   background-color: transparent;
-  // transition: border 0.7s;
   box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.15);
 }
 
@@ -458,10 +488,14 @@ hr {
   margin-left: 20px;
 }
 
+// секция Completed Projects
+
 .projects {
   background-color: #131313;
-  height: 1074px;
+  // height: 1074px;
 }
+
+// обёртка секции Completed Projects
 
 .projects__content-wrap {
   color: white;
@@ -469,6 +503,11 @@ hr {
   flex-direction: column;
   padding: 107px 32px 414px;
 }
+
+// обёртка контента Completed Projects
+// .projects__content {}
+
+// описание проекта
 
 .projects__description {
   height: 553px;
@@ -479,6 +518,8 @@ hr {
   align-content: flex-start;
 }
 
+// Completed Projects .title, text
+
 .projects__title {
   font-size: 27px;
   line-height: 37px;
@@ -488,16 +529,22 @@ hr {
 }
 
 .projects__text {
+  font-size: 14px;
+  line-height: 27px;
   margin-bottom: 34px;
   max-width: 443px;
   margin-right: 50px;
 }
 
+// свойства проекта
+
 .projects__properties {
+  max-width: 443px;
   display: flex;
   flex-wrap: wrap;
-  width: 443px;
 }
+
+// свойство проекта
 
 .projects__property {
   width: 177px;
@@ -505,9 +552,12 @@ hr {
   margin-bottom: 34px;
 }
 
+// правый отступ у чётных свойств проекта
+
 .projects__property:nth-child(even) {
   margin-right: 0px;
 }
+// нижний отступ у 3 и 4 свойства проека
 .projects__property:nth-child(n + 3) {
   margin-bottom: 0px;
 }
@@ -523,59 +573,60 @@ hr {
   line-height: 21px;
 }
 
+// навигация по проектам (со стрелками)
+
 .projects__slider-nav {
   height: 14px;
   display: flex;
   width: 205px;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
 }
 
-.slider__item--previous {
+.slider__item {
   content: "";
   width: 42px;
   height: 13px;
-  background-image: url('data:image/svg+xml,%3Csvg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M6.63807 13.276L2.29917e-05 6.638L6.63807 -3.82298e-05L7.58563 0.94753L1.89516 6.638L7.58563 12.3285L6.63807 13.276Z" fill="white"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M0.947579 5.9681L41.4556 5.9681L41.4556 7.30817L0.947578 7.30816L0.947579 5.9681Z" fill="white"/%3E%3C/svg%3E');
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.slider__item--previous {
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M6.63807 13.276L2.29917e-05 6.638L6.63807 -3.82298e-05L7.58563 0.94753L1.89516 6.638L7.58563 12.3285L6.63807 13.276Z" fill="white"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M0.947579 5.9681L41.4556 5.9681L41.4556 7.30817L0.947578 7.30816L0.947579 5.9681Z" fill="white"/%3E%3C/svg%3E');
 }
 
 .slider__item--next {
-  content: "";
-  width: 42px;
-  height: 13px;
   background-image: url('data:image/svg+xml,%3Csvg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M35.0451 -0.000183105L41.6831 6.63786L35.0451 13.2759L34.0975 12.3283L39.788 6.63786L34.0975 0.947384L35.0451 -0.000183105Z" fill="white"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M40.7356 7.30776L0.227569 7.30776L0.22757 5.9677L40.7356 5.9677L40.7356 7.30776Z" fill="white"/%3E%3C/svg%3E%0A');
-  background-position: center center;
-  background-repeat: no-repeat;
 }
+
+// круглые кнопки в навигации по проектам
 
 .slider__items {
   width: 64px;
-
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.slider__item {
+.slider__item--round {
   width: 10px;
   height: 10px;
   background-color: white;
   border-radius: 50%;
 }
 
-.slider__item:hover,
-.slider__item:active,
+.slider__item--round:hover,
+.slider__item--round:active,
 .slider__item--active {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+// список ссылок на проекты
+
 .projects__list {
+  padding: 0;
   list-style: none;
-  margin-bottom: 40px;
 }
 
 .projects__item {
@@ -601,6 +652,12 @@ hr {
 .projects__link--active {
   color: $alt-color;
   border-bottom: 1px solid $alt-color;
+}
+
+// слайдер картинок
+
+.projects__img-slider {
+  margin-top: 45px;
 }
 
 .slider__photo {
