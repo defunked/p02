@@ -47,8 +47,7 @@ hr {
   font-style: italic;
   text-transform: uppercase;
   border: 0;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: none;
   padding: 0;
@@ -168,6 +167,11 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-between;
+}
+
+.form__text {
+  font-family: $main-font;
+  text-align: center;
 }
 
 .form__button {
@@ -476,8 +480,7 @@ hr {
   background-color: transparent;
   border: 1px solid white;
   box-shadow: none;
-  transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero__button--transparent:hover {
@@ -812,5 +815,125 @@ hr {
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   position: relative;
   top: -27px;
+}
+
+.measurement {
+  height: 725px;
+  background-color: white;
+  background-image: url("../images/apartments-bg.png");
+  background-size: auto auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  // height: 808px;
+}
+
+.measurement__content {
+  display: flex;
+  justify-content: space-between;
+}
+.measurement__advantages {
+  margin-top: 11px;
+  margin-bottom: 26px;
+  height: 100%;
+  width: 375px;
+}
+.measurement__advantages-list {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  counter-reset: li;
+  padding: 0;
+  list-style: none;
+}
+
+.measurement__advantage {
+  position: relative;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  // position: relative;
+  padding-left: 59px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.measurement__advantage:before {
+  position: absolute;
+  content: "0" counter(li);
+  counter-increment: li;
+  // position: absolute;
+  background-color: $alt-color;
+  width: 42px;
+  height: 42px;
+  font-family: $title-font;
+  font-weight: normal;
+  margin-left: -59px;
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #ffffff;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+  border-radius: 30px;
+}
+
+.measurement__form {
+  margin: 0px;
+  display: flex;
+  // width: 506px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #131313;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+  // padding: 28px 49px;
+}
+
+.measurement__form .input__label--text {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 48px;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.measurement__form .form__input--text {
+  color: white;
+  background-color: transparent;
+  line-height: 19px;
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+  // background: red;
+  // vertical-align: bottom;
+}
+
+.measurement__form .form__input::placeholder {
+  color: white;
+}
+
+.measurement__form .input__label--checkbox {
+  color: white;
+  margin-top: 14px;
+}
+
+.measurement__form .form__button {
+  width: 200px;
+  height: 51px;
+  font-style: normal;
+  align-self: flex-end;
+  order: 10;
+  margin-top: 41px;
+}
+
+.measurement .form__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  width: 297px;
 }
 @import "helpers/adaptive";

@@ -26,7 +26,8 @@ module.exports = function() {
         //.pipe($.gp.sourcemaps.init())
         .pipe(
           $.gp.sass({
-            "include css": true
+            "include css": true,
+            outputStyle: "expanded"
           })
         )
         .on(
