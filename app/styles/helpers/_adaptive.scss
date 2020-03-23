@@ -18,56 +18,51 @@
     background-position: 55% 49%;
   }
 
-  .form {
-    margin: 0px;
-    max-width: 50%;
-    flex-direction: column;
-    // background-color: green;
-    justify-content: flex-start;
-    // margin-bottom: -100px;
-  }
+  // .form {
+  //   margin: 0px;
+  //   max-width: 50%;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  // }
 
-  .form__input::placeholder {
-    color: white;
-  }
+  // .form__input::placeholder {
+  //   color: white;
+  // }
 
-  .input__label--text {
-    width: 100%;
-    color: rgba(255, 255, 255, 0.5);
-    margin: 63px 0px 0px;
-    font-size: 13px;
-    line-height: 21px;
-    // background: tomato;
-  }
+  // .input__label--text {
+  //   width: 100%;
+  //   color: rgba(255, 255, 255, 0.5);
+  //   margin: 63px 0px 0px;
+  //   font-size: 13px;
+  //   line-height: 21px;
+  // }
 
-  .form__input--text {
-    color: white;
-    background-color: transparent;
-    line-height: 19px;
-    border-bottom: 1px solid white;
-    padding-bottom: 8px;
-    // background: red;
-    // vertical-align: bottom;
-  }
+  // .form__input--text {
+  //   color: white;
+  //   background-color: transparent;
+  //   line-height: 19px;
+  //   border-bottom: 1px solid white;
+  //   padding-bottom: 8px;
+  // }
 
-  .form__button {
-    order: 4;
-    width: 100%;
-    font-size: 13px;
-    list-style: 27px;
-    position: relative;
-    top: 26px;
-  }
+  // .form__button {
+  //   order: 4;
+  //   width: 100%;
+  //   font-size: 13px;
+  //   list-style: 27px;
+  //   position: relative;
+  //   top: 26px;
+  // }
 
-  .input__label--checkbox {
-    order: 3;
-    color: white;
-    margin-bottom: 62px;
-  }
+  // .input__label--checkbox {
+  //   order: 3;
+  //   color: white;
+  //   margin-bottom: 62px;
+  // }
 
-  .page-header {
-    position: static;
-  }
+  // .page-header {
+  //   position: static;
+  // }
 
   .header-wrap {
     height: 57px;
@@ -88,7 +83,6 @@
   .page-header__link:hover {
     text-decoration: none;
     top: 0;
-    // color: white;
   }
 
   .section-wrap {
@@ -98,14 +92,15 @@
     height: auto;
   }
 
+  .content-wrap {
+    padding: 0 18px;
+  }
+
   .hero,
   .projects {
     height: auto;
   }
 
-  .content-wrap {
-    padding: 0 18px;
-  }
   .hero__content-wrap {
     padding-top: 85px;
     padding-bottom: 61px;
@@ -212,32 +207,28 @@
     line-height: 15px;
   }
 
-  //
-  //
-  //
-
   .projects__slider-nav {
     display: none;
   }
   .projects__list {
     display: none;
   }
+
   .slider__photo {
+    display: block;
     width: 100%;
-    height: auto;
   }
+
   .slider__controls {
     display: flex;
   }
 
   .online-control {
     background-color: #131313;
-    // margin-bottom: -20px;
   }
 
   .online-control__content-wrap {
     margin-top: 0;
-    // margin-bottom: -20px;
   }
 
   .online-control__title {
@@ -258,6 +249,64 @@
     margin-bottom: 0px;
   }
 
+  .online-control__request {
+    margin-top: 76px;
+    padding: 0;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .online-control__request .input__label--text:first-of-type {
+    margin: 0;
+  }
+
+  .online-control__request .input__label--text {
+    margin: 0;
+    margin-top: 75px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+  }
+
+  .online-control__request .form__input {
+    border: none;
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+    border-bottom: 1px solid white;
+    width: 100%;
+  }
+
+  .online-control__request .form__input::placeholder {
+    color: white;
+  }
+
+  .online-control__request .input__label--checkbox {
+    font-size: 13px;
+    line-height: 21px;
+    color: white;
+    margin-top: 27px;
+    order: 3;
+  }
+
+  .online-control__request .form__button {
+    // margin-top: 62px;
+    order: 4;
+    width: 100%;
+    font-size: 13px;
+    line-height: 27px;
+    position: relative;
+    top: 26px;
+  }
+
   .repair-types__title {
     margin-top: 83px;
     margin-bottom: 40px;
@@ -271,18 +320,25 @@
   .repair-types__content {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    // line-height: 0;
   }
 
   .repair-type {
-    // max-width: 120%;
     padding-top: 223px;
     padding-left: 0;
-    padding-right: 70px;
-    margin-bottom: 79px;
+    width: 340px;
+    margin-bottom: 31px;
+    background-position: top left;
+  }
+
+  .repair-type:last-of-type {
+    margin-bottom: -20px;
   }
 
   .repair-type__description {
-    padding: 21px 31px 37px;
+    width: 270px;
+    padding: 21px 41px 37px 31px;
   }
 
   .repair-type__title {
@@ -298,10 +354,65 @@
     line-height: 22px;
   }
   .repair-type__cost {
+    height: 40px;
     font-size: 15px;
     line-height: 21px;
-    padding: 12px 16px;
+    padding: 11px 16px;
     top: -20px;
+  }
+
+  .measurement {
+    display: none;
+  }
+
+  .styles {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -122px;
+
+    &:after {
+      display: none;
+    }
+    &__content-wrap {
+    }
+    &__content {
+      height: auto;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &__title {
+      margin: 0;
+      margin-top: 55px;
+      padding: 0;
+      // height: 100px;
+      // margin-top: 55px;
+      font-size: 22px;
+      line-height: 30px;
+      text-align: center;
+      width: 100%;
+    }
+    &__nav-list {
+      display: none;
+    }
+    &__photos {
+      margin-top: 24px;
+      width: 100%;
+      height: auto;
+    }
+    &__photos .slider {
+      display: block;
+    }
+
+    &__photo {
+      display: none;
+    }
+  }
+  .our-clients {
+    display: none;
   }
 }
 
@@ -309,11 +420,10 @@
   .projects__properties {
     flex-wrap: wrap;
     width: 400px;
-    // flex-direction: column;
   }
-  .form {
-    max-width: 70%;
-  }
+  // .form {
+  //   max-width: 70%;
+  // }
 
   .repair-type {
     // max-width: 100%;
@@ -326,9 +436,9 @@
     flex-direction: column;
   }
 
-  .form {
-    max-width: 100%;
-  }
+  // .form {
+  //   max-width: 100%;
+  // }
 
   .hero__text {
     max-width: 100%;

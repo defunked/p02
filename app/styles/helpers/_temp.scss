@@ -1,0 +1,133 @@
+/* форма  белая*/
+
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 770px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.form__text {
+  text-align: center;
+}
+
+.form__button {
+  width: 200px;
+  height: 51px;
+  font-style: normal;
+  order: 3;
+}
+
+.form__button:focus {
+  outline: 2px solid $outline-color;
+  outline-offset: 1px;
+}
+
+/* инпут (общий стиль) */
+
+.form__input {
+  border: none;
+  font-size: 14px;
+  line-height: 23px;
+  color: #363636;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  // box-sizing: content-box;
+  width: 100%;
+}
+
+.form__input:focus,
+.form__input:active {
+  outline: 2px solid $outline-color;
+  outline-offset: 2px;
+}
+.form__input:active {
+  // outline: none;
+}
+
+/* инпут текст
+
+подпись инпута (текст) */
+
+.input__label--text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 14px;
+  line-height: 23px;
+  color: rgba(54, 54, 54, 0.5);
+  margin-right: 45px;
+  width: 230px;
+}
+
+//
+//
+
+// форма чёрная
+
+// .measurement__request {
+//   margin: 0px;
+//   display: flex;
+//   width: 506px;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+//   background: #131313;
+//   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+//   // border: 2px solid red;
+//   // box-sizing: content-box;
+//   flex-wrap: nowrap;
+//   padding: 28px 48px;
+// }
+
+.measurement__request .input__label--text {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 48px;
+  font-size: 13px;
+  line-height: 21px;
+  margin: 0;
+  margin-top: 48px;
+}
+
+.measurement__request .input__label--text:first-of-type {
+  margin-top: 39px;
+}
+
+.measurement__request .form__input--text {
+  color: white;
+  background-color: transparent;
+  line-height: 19px;
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+  // background: red;
+  // vertical-align: bottom;
+}
+
+.measurement__request .form__input::placeholder {
+  color: white;
+}
+
+.measurement__request .input__label--checkbox {
+  color: white;
+  margin-top: 14px;
+  align-self: flex-start;
+}
+
+.measurement__request .form__button {
+  width: 200px;
+  height: 51px;
+  font-style: normal;
+  align-self: flex-end;
+  order: 10;
+  margin-top: 41px;
+}
+
+.measurement .form__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  width: 297px;
+}
